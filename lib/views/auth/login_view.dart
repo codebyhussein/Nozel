@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hotel_app/Services/Facebook_Auth.dart';
 import 'package:hotel_app/Services/Google_Auth.dart';
 import 'package:hotel_app/views/auth/signUp.dart';
 
@@ -192,8 +193,13 @@ class LoginScreen extends StatelessWidget {
                                       },
                                     ),
                                     DefultCircleAvater(
-                                      Image: 'images/twitter.png',
-                                      onPressed: () {},
+                                      Image: 'images/facebook.png',
+                                      onPressed: () async {
+                                        await FacebookAuthService
+                                            .signInWithFacebook();
+                                        AppHelper.NavigateToNextScreens(
+                                            context, const HomeScreen());
+                                      },
                                     )
                                   ],
                                 ),
