@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hotel_app/views/menu_view/menu.dart';
 import '../../core/global.dart';
 import '../../widgets/rating.dart';
 
@@ -64,7 +65,7 @@ with us. We truly appreciate it.''',
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const HomeScreen()),
+                                                const MenuScreen()),
                                       );
                                     },
                                     icon: const Icon(

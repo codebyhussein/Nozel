@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hotel_app/views/menu_view/menu.dart';
 
 import '../../Cubit/HomeCubit/home_cubit.dart';
 
@@ -39,7 +40,7 @@ class Two_bedroom_suites extends StatelessWidget {
                       IconButton(
                           onPressed: () {
                             AppHelper.NavigateToNextScreens(
-                                context, HomeScreen());
+                                context, MenuScreen());
                           },
                           icon: Icon(
                             Icons.arrow_back_ios,

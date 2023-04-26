@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hotel_app/views/menu_view/menu.dart';
 import 'package:hotel_app/widgets/DefultDivider.dart';
 
 import '../../Cubit/HomeCubit/home_cubit.dart';
@@ -37,7 +38,7 @@ class DeluxeStudios extends StatelessWidget {
                       IconButton(
                           onPressed: () {
                             AppHelper.NavigateToNextScreens(
-                                context, HomeScreen());
+                                context, MenuScreen());
                           },
                           icon: const Icon(
                             Icons.arrow_back_ios,

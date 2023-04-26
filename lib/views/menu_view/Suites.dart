@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hotel_app/views/menu_view/menu.dart';
 import '../../core/global.dart';
 import '../../Cubit/HomeCubit/home_cubit.dart';
 
@@ -37,7 +38,7 @@ class Suites extends StatelessWidget {
                       IconButton(
                           onPressed: () {
                             AppHelper.NavigateToNextScreens(
-                                context, const HomeScreen());
+                                context, const MenuScreen());
                           },
                           icon: const Icon(
                             Icons.arrow_back_ios,

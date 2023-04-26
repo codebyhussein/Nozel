@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_app/core/global.dart';
 import 'package:hotel_app/core/notification.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'Cubit/HomeCubit/home_cubit.dart';
 import 'Cubit/LoginCubit/login_cubit.dart';
 import 'Cubit/RegisterCubit/register_cubit.dart';

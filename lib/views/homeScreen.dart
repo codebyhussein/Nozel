@@ -110,6 +110,49 @@ class _HomeScreenState extends State<HomeScreen> {
                         SizedBox(
                           height: 10,
                         ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        DefultDivider(),
+                        categoryScreen(
+                          CategoryFolder: 'deluxe studios',
+                          CategoryText: 'deluxe studios',
+                        ),
+                        DefultDecription(
+                          textDecription:
+                              'Everything you need, nothing you don’t. These stylish rooms for two people are designed to inspire and relax each interior is uniquely appointed queen ',
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        DefultDivider(),
+                        categoryScreen(
+                          CategoryFolder: 'Two bed room suites',
+                          CategoryText: 'Two bed room suites',
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        DefultDecription(
+                          textDecription:
+                              'Our signature accommodation, and where our passion project started. This stylish and unique two-story home is an ideal space for families, groups of friends, and celebrations.',
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        DefultDivider(),
+                        categoryScreen(
+                          CategoryFolder: 'suites',
+                          CategoryText: 'Suites',
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        DefultDecription(
+                          textDecription:
+                              'Room to relax with plush interiors, bohemian accents, and serene open floorplans. Ideal for two - four people. each interior is uniquely appointed queen or king bed kitchen with stove, sink, ',
+                        ),
+                        DefultDivider(),
                         Stack(
                           children: [
                             Container(
@@ -145,52 +188,6 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ],
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        DefultDivider(),
-                        categoryScreen(
-                          CategoryFolder: 'deluxe studios',
-                          CategoryText: 'deluxe studios',
-                        ),
-                        DefultDecription(
-                          textDecription:
-                              'Everything you need, nothing you don’t. These stylish rooms for two people are designed to inspire and relax each interior is uniquely appointed queen ',
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        DefultDivider(),
-                        categoryScreen(
-                          CategoryFolder: 'suites',
-                          CategoryText: 'Suites',
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        DefultDecription(
-                          textDecription:
-                              'Room to relax with plush interiors, bohemian accents, and serene open floorplans. Ideal for two - four people. each interior is uniquely appointed queen or king bed kitchen with stove, sink, ',
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        DefultDivider(),
-                        categoryScreen(
-                          CategoryFolder: 'Two bed room suites',
-                          CategoryText: 'Two bed room suites',
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        DefultDecription(
-                          textDecription:
-                              'Our signature accommodation, and where our passion project started. This stylish and unique two-story home is an ideal space for families, groups of friends, and celebrations.',
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        DefultDivider(),
                       ])),
             )));
   }

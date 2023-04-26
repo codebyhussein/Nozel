@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hotel_app/views/menu_view/menu.dart';
 
 import '../../Cubit/HomeCubit/home_cubit.dart';
 import '../../core/global.dart';
@@ -43,7 +44,7 @@ class CleaningScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const HomeScreen()),
+                                builder: (context) => const MenuScreen()),
                           );
                         },
                         icon: const Icon(

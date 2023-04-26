@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
 class DfultItemInMenu extends StatelessWidget {
-  DfultItemInMenu({super.key, required this.NameOfPage, required this.text});
+  DfultItemInMenu(
+      {super.key,
+      required this.NameOfPage,
+      required this.text,
+      required this.icondata});
   dynamic NameOfPage;
   String text;
+  IconData icondata;
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +22,8 @@ class DfultItemInMenu extends StatelessWidget {
       },
       child: Row(
         children: [
-          const Icon(
-            IconlyBold.home,
+          Icon(
+            icondata,
             color: Colors.white,
           ),
           const SizedBox(

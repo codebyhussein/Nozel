@@ -52,6 +52,7 @@ dependencies:
   page_transition: ^2.0.9
   awesome_notifications: ^0.7.4+1
   google_sign_in: ^6.1.0
+  flutter_facebook_auth: ^5.0.8
  
 
 dev_dependencies:

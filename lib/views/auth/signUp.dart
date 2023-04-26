@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hotel_app/Services/Facebook_Auth.dart';
+import 'package:hotel_app/Services/Google_Auth.dart';
 import 'package:hotel_app/views/auth/login_view.dart';
 import 'package:hotel_app/views/homeScreen.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -229,11 +231,21 @@ class SignUpScreen extends StatelessWidget {
                                 children: [
                                   DefultCircleAvater(
                                     Image: 'images/google.png',
-                                    onPressed: () {},
+                                    onPressed: () async {
+                                      await GoogleAuthService
+                                          .SigninWithGoogle();
+                                      AppHelper.NavigateToNextScreens(
+                                          context, const HomeScreen());
+                                    },
                                   ),
                                   DefultCircleAvater(
-                                    Image: 'images/twitter.png',
-                                    onPressed: () {},
+                                    Image: 'images/facebook.png',
+                                    onPressed: () async {
+                                      await FacebookAuthService
+                                          .signInWithFacebook();
+                                      AppHelper.NavigateToNextScreens(
+                                          context, const HomeScreen());
+                                    },
                                   )
                                 ],
                               ),

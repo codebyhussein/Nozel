@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotel_app/views/menu_view/menu.dart';
 import '../widgets/DefultTextFormField.dart';
 
 import '../core/global.dart';
@@ -38,7 +39,7 @@ class CategoryScreenServices extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const HomeScreen()),
+                                  builder: (context) => const MenuScreen()),
                             );
                           },
                           icon: const Icon(

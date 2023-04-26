@@ -36,6 +36,7 @@ class MenuScreen extends StatelessWidget {
                   children: [
                     AppLogo(hight: 250),
                     DfultItemInMenu(
+                      icondata: IconlyBold.home,
                       NameOfPage: HomeScreen(),
                       text: 'Home',
                     ),
@@ -43,6 +44,7 @@ class MenuScreen extends StatelessWidget {
                       height: 10,
                     ),
                     DfultItemInMenu(
+                      icondata: IconlyBold.plus,
                       NameOfPage: DeluxeStudios(),
                       text: 'Deluxe Studios',
                     ),
@@ -50,6 +52,7 @@ class MenuScreen extends StatelessWidget {
                       height: 10,
                     ),
                     DfultItemInMenu(
+                      icondata: IconlyBold.plus,
                       NameOfPage: Suites(),
                       text: 'Suites',
                     ),
@@ -57,6 +60,7 @@ class MenuScreen extends StatelessWidget {
                       height: 10,
                     ),
                     DfultItemInMenu(
+                      icondata: IconlyBold.plus,
                       NameOfPage: Two_bedroom_suites(),
                       text: 'Two bedroom Suite',
                     ),
@@ -64,6 +68,7 @@ class MenuScreen extends StatelessWidget {
                       height: 10,
                     ),
                     DfultItemInMenu(
+                      icondata: Icons.people,
                       NameOfPage: FeedBack(),
                       text: 'Feedback',
                     ),
@@ -71,6 +76,7 @@ class MenuScreen extends StatelessWidget {
                       height: 10,
                     ),
                     DfultItemInMenu(
+                      icondata: Icons.food_bank,
                       NameOfPage: CategoryScreenServices(),
                       text: 'Food services',
                     ),
@@ -78,6 +84,7 @@ class MenuScreen extends StatelessWidget {
                       height: 10,
                     ),
                     DfultItemInMenu(
+                      icondata: Icons.cleaning_services,
                       NameOfPage: CleaningScreen(),
                       text: 'Cleaning service',
                     ),
