@@ -3,14 +3,12 @@ import 'package:flutter/material.dart';
 class DefultCircleAvater extends StatelessWidget {
   DefultCircleAvater({super.key, required this.Image, required this.onPressed});
   String Image;
-  VoidCallback onPressed;
+  Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {
-        onPressed;
-      },
+      onPressed: onPressed,
       child: CircleAvatar(
         backgroundImage: AssetImage(Image),
         backgroundColor: Colors.transparent,

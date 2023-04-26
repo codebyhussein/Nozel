@@ -25,6 +25,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               image: DecorationImage(
                 image: AssetImage("images/SplashScreen.png"),
                 fit: BoxFit.cover,
+
               ),
             ),
             child: ListView(

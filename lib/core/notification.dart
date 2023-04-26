@@ -9,7 +9,7 @@ class DefultNotification {
       }
     });
 
-    await Future.delayed(const Duration(minutes: 1), () {
+    await Future.delayed(const Duration(minutes: 3), () {
       AwesomeNotifications().createNotification(
           content: NotificationContent(
               id: 10,

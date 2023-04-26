@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hotel_app/Services/Google_Auth.dart';
 import 'package:hotel_app/views/auth/signUp.dart';
 
 import '../../core/global.dart';
@@ -183,7 +184,12 @@ class LoginScreen extends StatelessWidget {
                                   children: [
                                     DefultCircleAvater(
                                       Image: 'images/google.png',
-                                      onPressed: () {},
+                                      onPressed: () async {
+                                        await GoogleAuthService
+                                            .SigninWithGoogle();
+                                        AppHelper.NavigateToNextScreens(
+                                            context, const HomeScreen());
+                                      },
                                     ),
                                     DefultCircleAvater(
                                       Image: 'images/twitter.png',
