@@ -4,12 +4,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_app/core/global.dart';
 import 'package:hotel_app/core/notification.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 import 'Cubit/HomeCubit/home_cubit.dart';
 import 'Cubit/LoginCubit/login_cubit.dart';
 import 'Cubit/RegisterCubit/register_cubit.dart';
+import 'core/style/colors.dart';
 import 'firebase_options.dart';
-import 'views/splashScreen.dart';
-import 'views/welcome.dart';
+import 'features/splash/splashScreen.dart';
+import 'features/welcome/welcome.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
