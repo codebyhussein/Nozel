@@ -1,7 +1,8 @@
-# hotel_app
+# nozel-hotel
 
 The "nozel app" is a mobile application that enables users to book hotel rooms from the convenience of their smartphones. It offers a user-friendly interface that allows users to browse through available rooms and more...
-
+# more information aboute nozel-app
+# youtube video [https://youtu.be/ojMtf3QDFhQ]
 ## Getting Started
 
 This project is a starting point for a Flutter application.
