@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/core/style/colors.dart';
 import 'package:hotel_app/features/widgets/category_page.dart';
 import 'package:page_transition/page_transition.dart';
@@ -34,11 +35,11 @@ class homeScreenBody extends StatelessWidget {
                   children: [
                     Stack(
                       children: [
-                        AppLogo(hight: 270),
+                        AppLogo(hight: 270.h),
                         Positioned(
-                          height: 50,
-                          left: 10,
-                          top: 39,
+                          height: 50.h,
+                          left: 10.w,
+                          top: 39.h,
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
@@ -55,14 +56,14 @@ class homeScreenBody extends StatelessWidget {
                                     context,
                                     PageTransition(
                                         type: PageTransitionType.leftToRight,
-                                        child: MenuScreen()));
+                                        child: const MenuScreen()));
                               },
                             ),
                           ),
                         ),
                         Positioned(
-                          top: 230,
-                          left: 130,
+                          top: 230.h,
+                          left: 130.w,
                           // bottom: 150,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -72,15 +73,15 @@ class homeScreenBody extends StatelessWidget {
                                 size: 20,
                                 color: Colors.white,
                               ),
-                              const SizedBox(
-                                width: 3,
+                              SizedBox(
+                                width: 3.w,
                               ),
                               const Text(
                                 '9.5',
                                 style: TextStyle(color: Colors.red),
                               ),
-                              const SizedBox(
-                                width: 8,
+                              SizedBox(
+                                width: 8.w,
                               ),
                               Icon(Icons.location_on_outlined,
                                   size: 20, color: textColor),
@@ -99,10 +100,10 @@ class homeScreenBody extends StatelessWidget {
                           'We offer 12 individually curated rooms (six deluxe studios, five suites, and one two bedroom suite) each uniquely designed with plush interiors, bohemian accents, and one-of-a-kind furnishings. Rooms feature custom art ',
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 10.h,
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     DefultDivider(),
                     categoryScreen(
@@ -113,71 +114,82 @@ class homeScreenBody extends StatelessWidget {
                       textDecription:
                           'Everything you need, nothing you don’t. These stylish rooms for two people are designed to inspire and relax each interior is uniquely appointed queen ',
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     DefultDivider(),
                     categoryScreen(
                       CategoryFolder: 'Two bed room suites',
                       CategoryText: 'Two bed room suites',
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     DefultDecription(
                       textDecription:
                           'Our signature accommodation, and where our passion project started. This stylish and unique two-story home is an ideal space for families, groups of friends, and celebrations.',
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     DefultDivider(),
                     categoryScreen(
                       CategoryFolder: 'suites',
                       CategoryText: 'Suites',
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     DefultDecription(
                       textDecription:
                           'Room to relax with plush interiors, bohemian accents, and serene open floorplans. Ideal for two - four people. each interior is uniquely appointed queen or king bed kitchen with stove, sink, ',
                     ),
                     DefultDivider(),
-                    Stack(
-                      children: [
-                        Container(
-                          height: 350,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(25),
-                              color: Colors.grey),
-                        ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: Image.asset(
-                            'images/hotelhome.jpg',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Positioned(
-                          bottom: 20,
-                          left: 90,
-                          child: MaterialButton(
-                            onPressed: () {
-                              AppHelper.NavigateToNextScreens(
-                                  context, const CategoryScreenServices());
-                            },
-                            child: Text(
-                              'our Services',
-                              style: TextStyle(
-                                  color: textColor,
-                                  fontFamily: 'Nova Oval',
-                                  fontSize: 30),
+                    Container(
+                      height: 350.h,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          color: Colors.grey),
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: Image.asset(
+                              'images/hotelhome.jpg',
+                              fit: BoxFit.cover,
                             ),
                           ),
-                        ),
-                      ],
+                          Positioned(
+                            bottom: 40.h,
+                            left: 50.w,
+                            child: Center(
+                              child: Container(
+                                width: 250.w,
+                                height: 50.h,
+                                decoration: BoxDecoration(
+                                    color: Colors.blueGrey,
+                                    borderRadius: BorderRadius.circular(15)),
+                                child: MaterialButton(
+                                  onPressed: () {
+                                    AppHelper.NavigateToNextScreens(context,
+                                        const CategoryScreenServices());
+                                  },
+                                  child: Center(
+                                    child: Text(
+                                      'our Services',
+                                      style: TextStyle(
+                                          color: textColor,
+                                          fontFamily: 'Nova Oval',
+                                          fontSize: 30.sp),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ])),
         ));

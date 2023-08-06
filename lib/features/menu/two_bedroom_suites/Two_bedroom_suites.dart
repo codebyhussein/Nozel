@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/core/style/colors.dart';
 import 'package:hotel_app/features/menu/menuScreen.dart';
 
@@ -28,43 +27,43 @@ class Two_bedroom_suites extends StatelessWidget {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 22),
+              padding: EdgeInsets.symmetric(horizontal: 22.w),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: 20,
+                    height: 20.h,
                   ),
                   Row(
                     children: [
                       IconButton(
                           onPressed: () {
                             AppHelper.NavigateToNextScreens(
-                                context, MenuScreen());
+                                context, const MenuScreen());
                           },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.arrow_back_ios,
                             color: Colors.white,
                           )),
                       SizedBox(
-                        width: 30,
+                        width: 30.w,
                       ),
                       Text(
                         'Two bed room suites',
                         style: TextStyle(
                             fontFamily: 'Nova Oval',
-                            fontSize: 25,
+                            fontSize: 25.sp,
                             color: textColor,
                             fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: 20.h,
                   ),
-                  Container(
-                    height: 600,
+                  SizedBox(
+                    height: 550.h,
                     child: FutureBuilder(
                       future: getImagesFromFirebaseStorage(
                           NameofFolder: 'Two bed room suites'),
@@ -119,7 +118,8 @@ class Two_bedroom_suites extends StatelessWidget {
                                       const Divider(),
                               itemCount: ListUrl.length);
                         } else {
-                          return Center(child: CircularProgressIndicator());
+                          return const Center(
+                              child: CircularProgressIndicator());
                         }
                       },
                     ),

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/features/menu/feedback/widgets/rating.dart';
 
 import '../../../Cubit/HomeCubit/home_cubit.dart';
-import '../../../core/global.dart';
 import '../../../core/style/colors.dart';
 import '../../widgets/DefultButtom.dart';
 import '../../widgets/DefultTextFormField.dart';
@@ -71,76 +69,76 @@ with us. We truly appreciate it.''',
                                   Icons.arrow_back_ios,
                                   color: Colors.white,
                                 )),
-                            const SizedBox(
-                              width: 30,
+                            SizedBox(
+                              width: 30.w,
                             ),
                             Text(
                               'FeedBack',
                               style: TextStyle(
-                                  fontSize: 30,
+                                  fontSize: 30.sp,
                                   color: textColor,
                                   fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),
-                        const SizedBox(
-                          height: 30,
+                        SizedBox(
+                          height: 30.h,
                         ),
                         Text(
                           'How satisfied are you with a booking process? ',
                           style: TextStyle(
                             color: textColor,
-                            fontSize: 20,
+                            fontSize: 20.sp,
                           ),
                         ),
-                        const SizedBox(
-                          height: 10,
+                        SizedBox(
+                          height: 10.h,
                         ),
                         RatingWidget(),
-                        const SizedBox(
-                          height: 10,
+                        SizedBox(
+                          height: 10.h,
                         ),
                         Text(
                           'How satisfied are you with the usability of the App? ',
                           style: TextStyle(
                             color: textColor,
-                            fontSize: 20,
+                            fontSize: 20.sp,
                           ),
                         ),
-                        const SizedBox(
-                          height: 10,
+                        SizedBox(
+                          height: 10.h,
                         ),
                         RatingWidget(),
-                        const SizedBox(
-                          height: 10,
+                        SizedBox(
+                          height: 10.h,
                         ),
                         Text(
                           'How satisfied are you with the online payment process? ',
                           style: TextStyle(
                             color: textColor,
-                            fontSize: 20,
+                            fontSize: 20.sp,
                           ),
                         ),
-                        const SizedBox(
-                          height: 10,
+                        SizedBox(
+                          height: 10.h,
                         ),
                         RatingWidget(),
-                        const SizedBox(
-                          height: 10,
+                        SizedBox(
+                          height: 10.h,
                         ),
                         Text(
                           'If you have any other feedback please tell us here. We love to improve our service?',
                           style: TextStyle(
                             color: textColor,
-                            fontSize: 20,
+                            fontSize: 20.sp,
                           ),
                         ),
-                        const SizedBox(
-                          height: 10.0,
+                        SizedBox(
+                          height: 10.h,
                         ),
                         DefultTextFormField(
                           text: 'Name',
-                          iconDatapre: Icons.person,
+                          prefixIcon: Icons.person,
                           keyboardType: TextInputType.text,
                           ispassword: false,
                           TextLabel: 'Enter your Name',
@@ -149,12 +147,12 @@ with us. We truly appreciate it.''',
                             name = value;
                           },
                         ),
-                        const SizedBox(
-                          height: 10,
+                        SizedBox(
+                          height: 10.h,
                         ),
                         Container(
-                          height: 110.0,
-                          width: 343,
+                          height: 110.0.h,
+                          width: 343.w,
                           decoration: BoxDecoration(
                               color: textformfield,
                               borderRadius: BorderRadius.circular(20)),
@@ -182,8 +180,8 @@ with us. We truly appreciate it.''',
                             },
                           ),
                         ),
-                        const SizedBox(
-                          height: 20,
+                        SizedBox(
+                          height: 20.h,
                         ),
                         DafultButtom(
                           text: 'Confirm',

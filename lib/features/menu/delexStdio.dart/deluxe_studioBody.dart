@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/core/style/colors.dart';
 
 import '../../../Cubit/HomeCubit/home_cubit.dart';
@@ -23,42 +24,43 @@ class deluxeScreenBody extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 22),
+          padding: EdgeInsets.symmetric(horizontal: 22.w),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: 20.h,
               ),
               Row(
                 children: [
                   IconButton(
                       onPressed: () {
-                        AppHelper.NavigateToNextScreens(context, MenuScreen());
+                        AppHelper.NavigateToNextScreens(
+                            context, const MenuScreen());
                       },
                       icon: const Icon(
                         Icons.arrow_back_ios,
                         color: Colors.white,
                       )),
-                  const SizedBox(
-                    width: 30,
+                  SizedBox(
+                    width: 30.w,
                   ),
                   Text(
                     'Deluxe Studios',
                     style: TextStyle(
                         fontFamily: 'Nova Oval',
-                        fontSize: 25,
+                        fontSize: 25.sp,
                         color: textColor,
                         fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: 20.h,
               ),
-              Container(
-                height: 620,
+              SizedBox(
+                height: 550.h,
                 child: FutureBuilder(
                   future: getImagesFromFirebaseStorage(
                       NameofFolder: 'deluxe studios'),

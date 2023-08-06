@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../core/global.dart';
 import '../../core/style/colors.dart';
 
 class DefultTextFormField extends StatelessWidget {
   DefultTextFormField({
+    super.key,
     required this.text,
     required this.message,
     required this.onChanged,
     @required this.sufixpreesed,
     required this.ispassword,
-    @required this.iconDatapre,
+    @required this.prefixIcon,
     @required this.TextLabel,
     @required this.keyboardType,
     @required this.ontap,
@@ -21,7 +22,7 @@ class DefultTextFormField extends StatelessWidget {
   TextInputType? keyboardType;
   Function? ontap;
 
-  IconData? iconDatapre;
+  IconData? prefixIcon;
   Function(String)? onChanged;
   IconButton? sufixpreesed;
   bool ispassword = false;
@@ -29,12 +30,12 @@ class DefultTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50.0,
-      width: 343,
+      height: 50.0.h,
+      width: 343.w,
       decoration: BoxDecoration(
           color: textformfield, borderRadius: BorderRadius.circular(20)),
       child: TextFormField(
-        style: TextStyle(color: Colors.white),
+        style: const TextStyle(color: Colors.white),
         onTap: () {
           ontap;
         },
@@ -43,12 +44,12 @@ class DefultTextFormField extends StatelessWidget {
         obscureText: ispassword,
         decoration: InputDecoration(
             labelText: TextLabel,
-            labelStyle: TextStyle(color: Colors.white),
+            labelStyle: const TextStyle(color: Colors.white),
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
-            suffix: sufixpreesed != null ? sufixpreesed : null,
+            suffix: sufixpreesed,
             hintText: '$text',
             prefixIcon: Icon(
-              iconDatapre,
+              prefixIcon,
               color: Colors.white,
             )),
         onChanged: onChanged,
@@ -65,12 +66,13 @@ class DefultTextFormField extends StatelessWidget {
 
 class DataTextFormField extends StatelessWidget {
   DataTextFormField({
+    super.key,
     required this.text,
     required this.message,
     required this.controller,
     @required this.sufixpreesed,
     required this.ispassword,
-    @required this.iconDatapre,
+    @required this.prefixIcon,
     @required this.TextLabel,
     @required this.keyboardType,
     @required this.ontap,
@@ -82,7 +84,7 @@ class DataTextFormField extends StatelessWidget {
   TextInputType? keyboardType;
   Function? ontap;
 
-  IconData? iconDatapre;
+  IconData? prefixIcon;
 
   IconButton? sufixpreesed;
   bool ispassword = false;
@@ -90,8 +92,8 @@ class DataTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50.0,
-      width: 343,
+      height: 50.0.h,
+      width: 343.w,
       decoration: BoxDecoration(
           color: textformfield, borderRadius: BorderRadius.circular(20)),
       child: TextFormField(
@@ -103,14 +105,14 @@ class DataTextFormField extends StatelessWidget {
         obscureText: ispassword,
         decoration: InputDecoration(
             labelText: TextLabel,
-            labelStyle: TextStyle(color: Colors.white),
+            labelStyle: const TextStyle(color: Colors.white),
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
-            suffix: sufixpreesed != null ? sufixpreesed : null,
+            suffix: sufixpreesed,
             //  suffix:Icon(iconeye) ,
             //  suffixIcon: Icon(iconeye),
             hintText: '$text',
             prefixIcon: Icon(
-              iconDatapre,
+              prefixIcon,
               color: Colors.white,
             )),
         validator: (value) {
@@ -126,12 +128,13 @@ class DataTextFormField extends StatelessWidget {
 
 class DefultTextFormFieldSearch extends StatelessWidget {
   DefultTextFormFieldSearch({
+    super.key,
     required this.text,
     required this.message,
     required this.onChanged,
     @required this.sufix,
     required this.ispassword,
-    @required this.iconDatapre,
+    @required this.prefixIcon,
     @required this.TextLabel,
     @required this.keyboardType,
     @required this.ontap,
@@ -142,7 +145,7 @@ class DefultTextFormFieldSearch extends StatelessWidget {
   TextInputType? keyboardType;
   Function? ontap;
 
-  IconData? iconDatapre;
+  IconData? prefixIcon;
   Function(String)? onChanged;
   Icon? sufix;
   bool ispassword = false;
@@ -150,12 +153,12 @@ class DefultTextFormFieldSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40.0,
-      width: 330,
+      height: 40.0.h,
+      width: 330.w,
       decoration: BoxDecoration(
           color: textformfield, borderRadius: BorderRadius.circular(20)),
       child: TextFormField(
-        style: TextStyle(color: Colors.white),
+        style: const TextStyle(color: Colors.white),
         onTap: () {
           ontap;
         },
@@ -164,13 +167,13 @@ class DefultTextFormFieldSearch extends StatelessWidget {
         obscureText: ispassword,
         decoration: InputDecoration(
             labelText: TextLabel,
-            labelStyle: TextStyle(color: Colors.white),
+            labelStyle: const TextStyle(color: Colors.white),
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
             //suffix: sufix,
             suffixIcon: sufix,
             hintText: '$text',
             prefixIcon: Icon(
-              iconDatapre,
+              prefixIcon,
               color: Colors.white,
             )),
         onChanged: onChanged,

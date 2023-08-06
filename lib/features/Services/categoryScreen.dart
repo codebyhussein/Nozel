@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/features/menu/menuScreen.dart';
 import '../../core/style/colors.dart';
 import '../widgets/DefultTextFormField.dart';
@@ -16,7 +17,6 @@ class CategoryScreenServices extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        //backgroundColor: mainColor,
         body: Container(
       height: double.infinity,
       width: double.infinity,
@@ -47,13 +47,13 @@ class CategoryScreenServices extends StatelessWidget {
                             Icons.arrow_back_ios,
                             color: Colors.white,
                           )),
-                      const SizedBox(
-                        width: 30,
+                      SizedBox(
+                        width: 30.w,
                       ),
                       Text(
                         'Categories',
                         style: TextStyle(
-                            fontSize: 30,
+                            fontSize: 30.sp,
                             color: textColor,
                             fontWeight: FontWeight.bold),
                       ),
@@ -127,7 +127,7 @@ class CategoryScreenServices extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => CleaningScreen()),
+                            builder: (context) => const CleaningScreen()),
                       );
                     },
                   ),

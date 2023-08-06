@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import '../../core/global.dart';
@@ -29,7 +30,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
             ),
             child: ListView(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.vertical,
               children: [
                 Padding(
@@ -38,37 +39,38 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(
-                        height: 50,
+                      SizedBox(
+                        height: 50.h,
                       ),
-                      Container(
-                        height: 350,
+                      SizedBox(
+                        height: 350.h,
                         child: Stack(
                           children: [
-                            AppLogo(hight: 290),
+                            AppLogo(hight: 290.h),
                             Positioned(
-                              top: 240,
+                              top: 240.h,
                               child: Text(
                                 'The Nozel Hotel is a \n luxurious and elegant destination\n for travelers seeking comfort\n and style. With its prime\n location and stunning views',
-                                style:
-                                    TextStyle(fontSize: 16, color: textColor),
+                                style: TextStyle(
+                                    fontSize: 16.sp, color: textColor),
                               ),
                             ),
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        height: 250,
+                      SizedBox(
+                        height: 250.h,
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 282),
+                        padding: EdgeInsets.only(left: 282.w),
                         child: Container(
                           child: MaterialButton(
                               onPressed: () {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => LoginScreen()),
+                                      builder: (context) =>
+                                          const LoginScreen()),
                                 );
                               },
                               child: Image.asset('images/next.png')),

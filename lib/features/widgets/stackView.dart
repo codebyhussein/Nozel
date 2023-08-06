@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/features/widgets/DefultButtominHome.dart';
 import 'package:page_transition/page_transition.dart';
 
-import '../../core/global.dart';
-import '../../core/style/colors.dart';
 import '../roomDetails/roomScreen.dart';
 
 class StackView extends StatelessWidget {
@@ -42,8 +41,8 @@ class StackView extends StatelessWidget {
         children: [
           Center(
             child: SizedBox(
-              height: 320,
-              width: 320,
+              height: 320.h,
+              width: 320.w,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
                 child: Image.network(
@@ -53,20 +52,22 @@ class StackView extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 10.h,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Text(
-              '''
-$CategorydescriptionText''',
+              CategorydescriptionText,
               maxLines: 3,
-              style: TextStyle(color: textColor, fontSize: 18),
+              style: TextStyle(
+                  color: Colors.blueGrey,
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.bold),
             ),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 10.h,
           ),
           Center(
             child: DefultButtomInHomePage(
@@ -75,7 +76,7 @@ $CategorydescriptionText''',
                     context,
                     PageTransition(
                         type: PageTransitionType.bottomToTop,
-                        duration: Duration(seconds: 1),
+                        duration: const Duration(seconds: 1),
                         child: roomScreen(
                           NumberOfHuman: NumberOfHuman,
                           oneNightPrice: oneNightPrice,
@@ -84,26 +85,11 @@ $CategorydescriptionText''',
                               More_than_oneNightPriceChange,
                           one_week_price: one_week_price,
                           one_week_priceChange: one_week_priceChange,
-                          NameOfCategory: '$CategoryText',
+                          NameOfCategory: CategoryText,
                           CategoryPage: cateogryPage,
                           CategoryDescription: CategorydescriptionText,
                         ),
                         childCurrent: this));
-                // Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //         builder: (context) => RoomsScreen(
-                //               NumberOfHuman: NumberOfHuman,
-                //               oneNightPrice: oneNightPrice,
-                //               More_than_oneNightPrice: More_than_oneNightPrice,
-                //               More_than_oneNightPriceChange:
-                //                   More_than_oneNightPriceChange,
-                //               one_week_price: one_week_price,
-                //               one_week_priceChange: one_week_priceChange,
-                //               NameOfCategory: '$CategoryText',
-                //               CategoryPage: cateogryPage,
-                //               CategoryDescription: CategorydescriptionText,
-                //             )));
               },
               text: 'Check price',
             ),

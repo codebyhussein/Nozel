@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DfultItemInMenu extends StatelessWidget {
   DfultItemInMenu(
@@ -26,12 +26,12 @@ class DfultItemInMenu extends StatelessWidget {
             icondata,
             color: Colors.white,
           ),
-          const SizedBox(
-            width: 10,
+          SizedBox(
+            width: 10.w,
           ),
           Text(
             text,
-            style: const TextStyle(fontSize: 20, color: Colors.white),
+            style: TextStyle(fontSize: 20.sp, color: Colors.white),
           )
         ],
       ),

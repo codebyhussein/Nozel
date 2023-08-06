@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/Cubit/HomeCubit/home_cubit.dart';
-import 'package:hotel_app/core/global.dart';
 import 'package:hotel_app/features/widgets/DefultButtom.dart';
 
 import '../../core/style/colors.dart';
@@ -27,16 +25,13 @@ class FoodBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          height: 100,
+        SizedBox(
+          height: 100.h,
           child: Row(
             children: [
               Image.asset(image),
-              const SizedBox(
-                width: 10,
-              ),
-              const SizedBox(
-                width: 25,
+              SizedBox(
+                width: 35.w,
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -47,39 +42,39 @@ class FoodBody extends StatelessWidget {
                     style: TextStyle(
                         color: textColor,
                         fontWeight: FontWeight.bold,
-                        fontSize: 18),
+                        fontSize: 18.sp),
                   ),
-                  const SizedBox(
-                    height: 10,
+                  SizedBox(
+                    height: 10.h,
                   ),
                   Row(
                     children: [
                       Text(
                         count.toString(),
-                        style: TextStyle(color: Colors.red, fontSize: 12),
+                        style: const TextStyle(color: Colors.red, fontSize: 12),
                       ),
-                      const SizedBox(
-                        width: 10,
+                      SizedBox(
+                        width: 10.w,
                       ),
                       CircleAvatar(
                         backgroundColor: Colors.white,
                         radius: 3,
                         child: Text(
                           '.',
-                          style: TextStyle(color: textColor, fontSize: 15),
+                          style: TextStyle(color: textColor, fontSize: 15.sp),
                         ),
                       ),
-                      const SizedBox(
-                        width: 6,
+                      SizedBox(
+                        width: 6.w,
                       ),
                       Text(
-                        'PLN ' + price.toString(),
-                        style: TextStyle(color: Colors.red, fontSize: 12),
+                        'PLN $price',
+                        style: TextStyle(color: Colors.red, fontSize: 12.sp),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                  SizedBox(
+                    height: 10.h,
                   ),
                   Column(
                     children: [
@@ -87,33 +82,34 @@ class FoodBody extends StatelessWidget {
                         children: [
                           Text(
                             date,
-                            style: TextStyle(color: textColor, fontSize: 10),
+                            style: TextStyle(color: textColor, fontSize: 10.sp),
                           ),
-                          const SizedBox(
-                            width: 6,
+                          SizedBox(
+                            width: 6.w,
                           ),
                           CircleAvatar(
                             radius: 4,
                             backgroundColor: Colors.white,
                             child: Text(
                               '.',
-                              style: TextStyle(color: textColor, fontSize: 15),
+                              style:
+                                  TextStyle(color: textColor, fontSize: 15.sp),
                             ),
                           ),
                         ],
                       ),
-                      const SizedBox(
-                        width: 8,
+                      SizedBox(
+                        width: 8.w,
                       ),
                       Text(
                         'Completed',
                         style: TextStyle(
                             color: textColor,
                             fontWeight: FontWeight.bold,
-                            fontSize: 15),
+                            fontSize: 15.sp),
                       ),
-                      const SizedBox(
-                        height: 6,
+                      SizedBox(
+                        height: 6.h,
                       ),
                     ],
                   )
@@ -123,11 +119,11 @@ class FoodBody extends StatelessWidget {
           ),
         ),
         Positioned(
-          right: 10,
-          top: 20,
+          right: 10.w,
+          top: 20.h,
           child: SizedBox(
-            width: 75,
-            height: 40,
+            width: 75.w,
+            height: 40.h,
             child: DafultButtom(
               text: 'Buy',
               ontap: () async {
@@ -149,7 +145,7 @@ we hope you enjoy your meal!"
                       color: Colors.white,
                     ),
                   ),
-                  duration: Duration(seconds: 4),
+                  duration: Duration(seconds: 3),
                 ));
               },
             ),
@@ -157,6 +153,5 @@ we hope you enjoy your meal!"
         )
       ],
     );
-    ;
   }
 }

@@ -1,10 +1,7 @@
-import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_storage/firebase_storage.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:meta/meta.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 part 'home_state.dart';
@@ -116,7 +113,8 @@ class HomeCubit extends Cubit<HomeState> {
   List<Map> hotelroomdescriptionSuites = [
     {
       'hotelName': 'Standard Room',
-      'description': '''
+      'description':
+          '''
 This is a basic room that usually
 comes with a queen or king-sized
 bed, a dresser,a desk, and an en..
@@ -131,7 +129,8 @@ comfortable place to stay.''',
     },
     {
       'hotelName': 'Deluxe Room',
-      'description': '''
+      'description':
+          '''
 A deluxe room is similar to
 a standard room but is usually
 more spacious and comes with..
@@ -147,7 +146,8 @@ of the pool or garden.''',
     },
     {
       'hotelName': 'Superior Room',
-      'description': '''
+      'description':
+          '''
 A superior room is a step up
 from the deluxe room and usually
 comes with more luxurious furnishings..
@@ -163,7 +163,8 @@ or a larger balcony.''',
     },
     {
       'hotelName': 'Family Room',
-      'description': '''
+      'description':
+          '''
 A family room is perfect for families
 traveling together as it usually
 comes with multipl..
@@ -180,7 +181,8 @@ or dining area for added convenience.
     },
     {
       'hotelName': 'Junior Suite',
-      'description': '''
+      'description':
+          '''
 A junior suite is a spacious room
 that usually comes with a separate
 living area and bedroom. It may..
@@ -195,7 +197,8 @@ or terrace with a view.''',
     },
     {
       'hotelName': 'Executive Suite',
-      'description': '''
+      'description':
+          '''
 An executive suite is a luxurious
 room that comes with a separate
 bedroom, living area, and dining..
@@ -211,7 +214,8 @@ a view of the city or the Nile River.
     },
     {
       'hotelName': 'Royal Suite',
-      'description': '''
+      'description':
+          '''
 A royal suite is the most luxurious
 room in the hotel and usually comes
 with a separate bedroom, living area..
@@ -228,7 +232,8 @@ tub and other lavish amenities.''',
     },
     {
       'hotelName': 'Pool View Room',
-      'description': '''
+      'description':
+          '''
 A pool view room is a standard
 or deluxe room with a balcony
 or terrace that overlooks the hotel's..
@@ -243,7 +248,8 @@ and enjoy the views.''',
     },
     {
       'hotelName': 'Garden View Room',
-      'description': '''
+      'description':
+          '''
 A garden view room is a standard or
 deluxe room with a balcony or
 terrace that overlooks..
@@ -258,7 +264,8 @@ serene environment.''',
     },
     {
       'hotelName': 'Nile View Room',
-      'description': '''
+      'description':
+          '''
 A Nile view room is a standard
 or deluxe room with a balcony or
 terrace that overlooks..

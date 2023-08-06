@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/core/style/colors.dart';
-import 'package:page_transition/page_transition.dart';
 
 class AppLogo extends StatelessWidget {
   AppLogo({super.key, required this.hight});
@@ -38,7 +38,7 @@ class DefultDecription extends StatelessWidget {
         textDecription,
         overflow: TextOverflow.ellipsis,
         maxLines: 3,
-        style: TextStyle(color: textColor, fontSize: 18),
+        style: TextStyle(color: textColor, fontSize: 18.sp),
       ),
     );
   }

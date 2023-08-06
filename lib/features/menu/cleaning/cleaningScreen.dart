@@ -7,6 +7,6 @@ class CleaningScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: cleaningScreenBody());
+    return const Scaffold(body: cleaningScreenBody());
   }
 }

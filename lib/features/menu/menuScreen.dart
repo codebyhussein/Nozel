@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:hotel_app/core/getAllImageService.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../core/global.dart';
 import '../../core/style/colors.dart';
@@ -33,62 +33,62 @@ class MenuScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    AppLogo(hight: 250),
+                    AppLogo(hight: 250.h),
                     DfultItemInMenu(
                       icondata: IconlyBold.home,
-                      NameOfPage: HomeScreen(),
+                      NameOfPage: const HomeScreen(),
                       text: 'Home',
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     DfultItemInMenu(
                       icondata: IconlyBold.plus,
-                      NameOfPage: DeluxeStudios(),
+                      NameOfPage: const DeluxeStudios(),
                       text: 'Deluxe Studios',
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     DfultItemInMenu(
                       icondata: IconlyBold.plus,
-                      NameOfPage: Suites(),
+                      NameOfPage: const Suites(),
                       text: 'Suites',
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     DfultItemInMenu(
                       icondata: IconlyBold.plus,
-                      NameOfPage: Two_bedroom_suites(),
+                      NameOfPage: const Two_bedroom_suites(),
                       text: 'Two bedroom Suite',
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     DfultItemInMenu(
                       icondata: Icons.people,
                       NameOfPage: FeedBackScreen(),
                       text: 'Feedback',
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     DfultItemInMenu(
                       icondata: Icons.food_bank,
-                      NameOfPage: CategoryScreenServices(),
+                      NameOfPage: const CategoryScreenServices(),
                       text: 'Food services',
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                     DfultItemInMenu(
                       icondata: Icons.cleaning_services,
-                      NameOfPage: CleaningScreen(),
+                      NameOfPage: const CleaningScreen(),
                       text: 'Cleaning service',
                     ),
-                    const SizedBox(
-                      height: 10,
+                    SizedBox(
+                      height: 10.h,
                     ),
                   ],
                 ))));

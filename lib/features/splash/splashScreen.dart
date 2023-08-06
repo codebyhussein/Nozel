@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/features/home/homeScreen.dart';
 
 import '../../core/global.dart';
@@ -42,23 +43,23 @@ class _SplashScreensState extends State<SplashScreens>
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 300,
+            SizedBox(
+              height: 300.h,
               child: Stack(
                 children: [
                   AppLogo(
-                    hight: 300,
+                    hight: 300.h,
                   ),
                   Positioned(
-                    bottom: 10,
-                    left: 70,
+                    bottom: 10.h,
+                    left: 70.w,
                     child: SlideTransition(
                       position: SlideingAnimation,
-                      child: const Text(
+                      child: Text(
                         'Welcome In The Nozel Hotel',
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -74,13 +75,11 @@ class _SplashScreensState extends State<SplashScreens>
 
   gotoHomeScreen() {
     Timer(
-        Duration(seconds: 2),
-        () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const HomeScreen()),
-              )
-            });
+        const Duration(seconds: 2),
+        () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const HomeScreen()),
+            ));
   }
 
   initSlidingAnimation() {

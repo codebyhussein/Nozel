@@ -6,6 +6,6 @@ class DeluxeStudios extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: deluxeScreenBody());
+    return const Scaffold(body: deluxeScreenBody());
   }
 }

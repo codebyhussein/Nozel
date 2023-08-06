@@ -1,14 +1,8 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/core/style/colors.dart';
 import 'package:hotel_app/features/widgets/foodbody.dart';
-import '../../../Cubit/HomeCubit/home_cubit.dart';
 
-import '../../../core/getAllImageService.dart';
-import '../../../core/global.dart';
-import '../../widgets/DefultButtom.dart';
 import '../../Services/categoryScreen.dart';
 import '../../widgets/DefultTextFormField.dart';
 
@@ -134,24 +128,24 @@ class _FoodScreenState extends State<FoodScreen> {
                             Icons.arrow_back_ios,
                             color: Colors.white,
                           )),
-                      const SizedBox(
-                        width: 30,
+                      SizedBox(
+                        width: 30.w,
                       ),
                       Text(
                         widget.NameOfCategory,
                         style: TextStyle(
-                            fontSize: 30,
+                            fontSize: 30.sp,
                             color: textColor,
                             fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                  SizedBox(
+                    height: 10.h,
                   ),
                   DefultTextFormFieldSearch(
                       text: 'Search',
-                      iconDatapre: Icons.search,
+                      prefixIcon: Icons.search,
                       keyboardType: TextInputType.text,
                       ispassword: false,
                       TextLabel: 'search',
@@ -163,11 +157,11 @@ class _FoodScreenState extends State<FoodScreen> {
                         Icons.mic,
                         color: Colors.white,
                       )),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: 20.h,
                   ),
                   SizedBox(
-                    height: 550,
+                    height: 550.h,
                     child: ListView.separated(
                         physics: const BouncingScrollPhysics(),
                         itemBuilder: (context, index) {
@@ -179,10 +173,10 @@ class _FoodScreenState extends State<FoodScreen> {
                               nameofFood: FoundItems[index]['name']);
                         },
                         separatorBuilder: (context, index) {
-                          return const Padding(
-                            padding: EdgeInsets.only(left: 60),
+                          return Padding(
+                            padding: EdgeInsets.only(left: 60.w),
                             child: Divider(
-                              height: 1,
+                              height: 1.h,
                               endIndent: 0,
                               color: Colors.white,
                             ),

@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hotel_app/core/global.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/core/notification.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -60,12 +60,19 @@ class _MyAppState extends State<MyApp> {
           create: (context) => HomeCubit(),
         ),
       ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          scaffoldBackgroundColor: mainColor,
-        ),
-        home: widget.startWidget,
+      child: ScreenUtilInit(
+        designSize: const Size(360, 690),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (context, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              scaffoldBackgroundColor: mainColor,
+            ),
+            home: widget.startWidget,
+          );
+        },
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/Cubit/HomeCubit/home_cubit.dart';
 import 'package:hotel_app/core/getAllImageService.dart';
 import 'package:hotel_app/core/style/colors.dart';
@@ -28,8 +29,8 @@ class SuitesScreenBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: 20.h,
               ),
               Row(
                 children: [
@@ -42,24 +43,24 @@ class SuitesScreenBody extends StatelessWidget {
                         Icons.arrow_back_ios,
                         color: Colors.white,
                       )),
-                  const SizedBox(
-                    width: 80,
+                  SizedBox(
+                    width: 80.w,
                   ),
                   Text(
                     'Suites',
                     style: TextStyle(
                         fontFamily: 'Nova Oval',
-                        fontSize: 25,
+                        fontSize: 25.sp,
                         color: textColor,
                         fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: 20.h,
               ),
-              Container(
-                height: 600,
+              SizedBox(
+                height: 550.h,
                 child: FutureBuilder(
                   future: getImagesFromFirebaseStorage(NameofFolder: 'suites'),
                   builder: (context, snapshot) {

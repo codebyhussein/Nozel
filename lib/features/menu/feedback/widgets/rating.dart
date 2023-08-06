@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hotel_app/core/global.dart';
+
 import 'package:hotel_app/core/style/colors.dart';
 
 class RatingWidget extends StatefulWidget {
+  const RatingWidget({super.key});
+
   @override
   _RatingWidgetState createState() => _RatingWidgetState();
 }

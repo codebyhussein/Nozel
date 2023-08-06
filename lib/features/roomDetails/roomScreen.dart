@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_core/get_core.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../core/global.dart';
 import '../../core/style/colors.dart';
 import '../booking/userBooked.dart';
 import '../widgets/DefultButtom.dart';
@@ -31,254 +30,260 @@ class roomScreen extends StatelessWidget {
   String one_week_priceChange;
   @override
   Widget build(BuildContext context) {
-    return Container(
-        height: double.infinity,
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("images/booking.png"),
-            fit: BoxFit.cover,
+    return Scaffold(
+      body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("images/booking.png"),
+              fit: BoxFit.cover,
+            ),
           ),
-        ),
-        child: ListView(
-          physics: BouncingScrollPhysics(),
-          scrollDirection: Axis.vertical,
-          children: [
-            Padding(
-              padding: EdgeInsets.all(AppBadding),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: Row(
-                      children: [
-                        IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const HomeScreen()),
-                            );
-                          },
-                          icon: Icon(
-                            Icons.arrow_back_ios,
-                            color: Colors.white,
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 30,
-                        ),
-                        Text(
-                          '$NameOfCategory',
-                          style: TextStyle(
-                              fontFamily: 'Nova Oval',
-                              fontSize: 22,
-                              color: textColor,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  ClipRRect(
-                      borderRadius: BorderRadius.circular(15),
-                      child: Image.network(CategoryPage)),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    CategoryDescription,
-                    style: TextStyle(color: textColor, fontSize: 18),
-                  ),
-                  const SizedBox(
-                    height: 8,
-                  ),
-                  Row(
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+          child: ListView(
+            physics: const BouncingScrollPhysics(),
+            scrollDirection: Axis.vertical,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(AppBadding),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 20.w),
+                      child: Row(
                         children: [
-                          Text(
-                            'Maximum Occupancy',
-                            style: TextStyle(color: textColor, fontSize: 18),
+                          IconButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const HomeScreen()),
+                              );
+                            },
+                            icon: const Icon(
+                              Icons.arrow_back_ios,
+                              color: Colors.white,
+                            ),
                           ),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.person,
+                          SizedBox(
+                            width: 30.w,
+                          ),
+                          Text(
+                            NameOfCategory,
+                            style: TextStyle(
+                                fontFamily: 'Nova Oval',
+                                fontSize: 22.sp,
                                 color: textColor,
-                              ),
-                              const SizedBox(
-                                width: 1,
-                              ),
-                              Text(
-                                NumberOfHuman,
-                                style: const TextStyle(
-                                    color: Colors.red, fontSize: 18),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                      const SizedBox(
-                        width: 50,
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            'Minimum Stay',
-                            style: TextStyle(color: textColor, fontSize: 18),
-                          ),
-                          Row(
-                            children: [
-                              const Text(
-                                '1',
-                                style:
-                                    TextStyle(color: Colors.red, fontSize: 18),
-                              ),
-                              const SizedBox(
-                                width: 1,
-                              ),
-                              Text(
-                                ' Night(s)',
-                                style:
-                                    TextStyle(color: textColor, fontSize: 18),
-                              ),
-                            ],
+                                fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 222),
-                        child: Row(
+                    ),
+                    SizedBox(
+                      height: 15.h,
+                    ),
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(15),
+                        child: Image.network(CategoryPage)),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    Text(
+                      CategoryDescription,
+                      style: TextStyle(color: textColor, fontSize: 18.sp),
+                    ),
+                    SizedBox(
+                      height: 8.h,
+                    ),
+                    Row(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              'Price for 1 Night(s)',
-                              style: TextStyle(color: Colors.red, fontSize: 15),
+                            Text(
+                              'Maximum Occupancy',
+                              style:
+                                  TextStyle(color: textColor, fontSize: 16.sp),
+                            ),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.person,
+                                  color: textColor,
+                                ),
+                                SizedBox(
+                                  width: 1.w,
+                                ),
+                                Text(
+                                  NumberOfHuman,
+                                  style: TextStyle(
+                                      color: Colors.red, fontSize: 18.sp),
+                                ),
+                              ],
                             )
                           ],
                         ),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.circle,
-                            color: textColor,
-                          ),
-                          const SizedBox(
-                            width: 2,
-                          ),
-                          Text(
-                            'One night',
-                            style: TextStyle(color: textColor, fontSize: 18),
-                          ),
-                          const SizedBox(
-                            width: 120,
-                          ),
-                          Text(
-                            '\$$oneNightPrice',
-                            style: TextStyle(color: textColor, fontSize: 18),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.data_exploration_rounded,
-                            color: textColor,
-                          ),
-                          const SizedBox(
-                            width: 2,
-                          ),
-                          Text(
-                            'More than 1 day',
-                            style: TextStyle(color: textColor, fontSize: 18),
-                          ),
-                          const SizedBox(
-                            width: 70,
-                          ),
-                          Text(
-                            '\$$More_than_oneNightPrice',
-                            style: const TextStyle(
-                              decoration: TextDecoration.lineThrough,
-                              color: Colors.red,
-                              fontSize: 18,
+                        SizedBox(
+                          width: 50.w,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              'Minimum Stay',
+                              style:
+                                  TextStyle(color: textColor, fontSize: 18.sp),
                             ),
-                          ),
-                          Text(
-                            '\$$More_than_oneNightPriceChange',
-                            style: const TextStyle(
-                                color: Colors.green, fontSize: 18),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.data_exploration_rounded,
-                            color: textColor,
-                          ),
-                          const SizedBox(
-                            width: 2,
-                          ),
-                          Text(
-                            'One week',
-                            style: TextStyle(color: textColor, fontSize: 18),
-                          ),
-                          const SizedBox(
-                            width: 120,
-                          ),
-                          Text(
-                            '\$$one_week_price',
-                            style: const TextStyle(
-                              decoration: TextDecoration.lineThrough,
-                              color: Colors.red,
-                              fontSize: 18,
+                            Row(
+                              children: [
+                                Text(
+                                  '1',
+                                  style: TextStyle(
+                                      color: Colors.red, fontSize: 16.sp),
+                                ),
+                                SizedBox(
+                                  width: 1.w,
+                                ),
+                                Text(
+                                  ' Night(s)',
+                                  style: TextStyle(
+                                      color: textColor, fontSize: 16.sp),
+                                ),
+                              ],
                             ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 222.w),
+                          child: Text(
+                            'Price for 1 Night(s)',
+                            style:
+                                TextStyle(color: Colors.red, fontSize: 10.sp),
                           ),
-                          Text(
-                            '\$$one_week_priceChange',
-                            style: const TextStyle(
-                                color: Colors.green, fontSize: 18),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  DafultButtom(
-                    ontap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => UserBooked()),
-                      );
-                    },
-                    text: 'Book Now',
-                  )
-                ],
+                        ),
+                        SizedBox(
+                          height: 10.h,
+                        ),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.circle,
+                              color: textColor,
+                            ),
+                            SizedBox(
+                              width: 2.w,
+                            ),
+                            Text(
+                              'One night',
+                              style:
+                                  TextStyle(color: textColor, fontSize: 18.sp),
+                            ),
+                            SizedBox(
+                              width: 120.w,
+                            ),
+                            Text(
+                              '\$$oneNightPrice',
+                              style:
+                                  TextStyle(color: textColor, fontSize: 18.sp),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10.h,
+                        ),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.data_exploration_rounded,
+                              color: textColor,
+                            ),
+                            SizedBox(
+                              width: 2.w,
+                            ),
+                            Text(
+                              'More than 1 day',
+                              style:
+                                  TextStyle(color: textColor, fontSize: 18.sp),
+                            ),
+                            SizedBox(
+                              width: 70.w,
+                            ),
+                            Text(
+                              '\$$More_than_oneNightPrice',
+                              style: TextStyle(
+                                decoration: TextDecoration.lineThrough,
+                                color: Colors.red,
+                                fontSize: 18.sp,
+                              ),
+                            ),
+                            Text(
+                              '\$$More_than_oneNightPriceChange',
+                              style: TextStyle(
+                                  color: Colors.green, fontSize: 18.sp),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10.h,
+                        ),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.data_exploration_rounded,
+                              color: textColor,
+                            ),
+                            SizedBox(
+                              width: 2.w,
+                            ),
+                            Text(
+                              'One week',
+                              style:
+                                  TextStyle(color: textColor, fontSize: 18.sp),
+                            ),
+                            SizedBox(
+                              width: 120.w,
+                            ),
+                            Text(
+                              '\$$one_week_price',
+                              style: TextStyle(
+                                decoration: TextDecoration.lineThrough,
+                                color: Colors.red,
+                                fontSize: 18.sp,
+                              ),
+                            ),
+                            Text(
+                              '\$$one_week_priceChange',
+                              style: TextStyle(
+                                  color: Colors.green, fontSize: 18.sp),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    DafultButtom(
+                      ontap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const UserBooked()),
+                        );
+                      },
+                      text: 'Book Now',
+                    )
+                  ],
+                ),
               ),
-            ),
-          ],
-        ));
+            ],
+          )),
+    );
   }
 }

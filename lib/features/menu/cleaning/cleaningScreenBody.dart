@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../Cubit/HomeCubit/home_cubit.dart';
 import '../../widgets/DefultButtominHome.dart';
@@ -10,7 +11,7 @@ class cleaningScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: double.infinity,
       width: double.infinity,
       child: Padding(
@@ -24,12 +25,12 @@ class cleaningScreenBody extends StatelessWidget {
               children: [
                 Image.asset(
                   'images/logoClean.png',
-                  height: 220,
+                  height: 220.h,
                   width: double.infinity,
                 ),
                 Positioned(
-                  left: 10,
-                  top: 70,
+                  left: 10.w,
+                  top: 70.h,
                   child: IconButton(
                       onPressed: () {
                         Navigator.push(
@@ -54,33 +55,33 @@ class cleaningScreenBody extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
-                const Positioned(
-                    bottom: 10,
-                    left: 100,
+                Positioned(
+                    bottom: 10.h,
+                    left: 100.w,
                     child: Text(
                       'Cleaning room',
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 25,
+                          fontSize: 25.sp,
                           fontWeight: FontWeight.bold),
                     )),
               ],
             ),
-            const SizedBox(
-              height: 70,
+            SizedBox(
+              height: 70.h,
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 50),
+            Padding(
+              padding: EdgeInsets.only(left: 50.w),
               child: Text(
                 'You can order unlimited cleaning service for free',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 25,
+                  fontSize: 25.sp,
                 ),
               ),
             ),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
             DefultButtomInHomePage(
               text: 'Order now',

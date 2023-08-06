@@ -6,6 +6,6 @@ class Suites extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SuitesScreenBody());
+    return const Scaffold(body: SuitesScreenBody());
   }
 }

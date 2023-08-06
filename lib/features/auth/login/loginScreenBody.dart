@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/features/auth/login/login_view.dart';
 import 'package:hotel_app/features/auth/signup/signUp.dart';
 import 'package:hotel_app/features/home/homeScreen.dart';
@@ -38,7 +38,7 @@ class loginScreenBody extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.all(AppBadding),
+        padding: const EdgeInsets.all(AppBadding),
         child: BlocConsumer<LoginCubit, LoginState>(
           listener: (context, state) {
             if (state is LoginLoading) {
@@ -48,7 +48,7 @@ class loginScreenBody extends StatelessWidget {
                   content: Text(state.errorMassege,
                       style: const TextStyle(color: Colors.white))));
               isloading = true;
-              AppHelper.NavigateToNextScreens(context, LoginScreen());
+              AppHelper.NavigateToNextScreens(context, const LoginScreen());
             } else if (state is LoginSuccess) {
               AppHelper.NavigateToNextScreens(context, const HomeScreen());
               isloading = false;
@@ -66,7 +66,7 @@ class loginScreenBody extends StatelessWidget {
                 key: _formKey,
                 child: Center(
                   child: ListView(
-                    physics: BouncingScrollPhysics(),
+                    physics: const BouncingScrollPhysics(),
                     scrollDirection: Axis.vertical,
                     children: [
                       Column(
@@ -74,22 +74,22 @@ class loginScreenBody extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          const SizedBox(
-                            height: 50,
+                          SizedBox(
+                            height: 50.h,
                           ),
                           Text(
                             'Sign In',
                             style: TextStyle(
-                                fontSize: 30,
+                                fontSize: 30.sp,
                                 color: textColor,
                                 fontWeight: FontWeight.bold),
                           ),
-                          const SizedBox(
-                            height: 100,
+                          SizedBox(
+                            height: 100.h,
                           ),
                           DefultTextFormField(
                             text: 'Email',
-                            iconDatapre: Icons.email,
+                            prefixIcon: Icons.email,
                             keyboardType: TextInputType.emailAddress,
                             ispassword: false,
                             TextLabel: 'Email',
@@ -98,12 +98,12 @@ class loginScreenBody extends StatelessWidget {
                               email = value;
                             },
                           ),
-                          const SizedBox(
-                            height: 15,
+                          SizedBox(
+                            height: 15.h,
                           ),
                           DefultTextFormField(
                             text: 'Password',
-                            iconDatapre: Icons.lock,
+                            prefixIcon: Icons.lock,
                             keyboardType: TextInputType.emailAddress,
                             ispassword: ispassword,
                             TextLabel: 'Password',
@@ -117,23 +117,23 @@ class loginScreenBody extends StatelessWidget {
                                       .change(ispassword: ispassword);
                                 },
                                 icon: ispassword
-                                    ? const Text(
+                                    ? Text(
                                         'Show',
                                         style: TextStyle(
-                                          fontSize: 9,
-                                          color: Color(0xffBDBDBD),
+                                          fontSize: 9.sp,
+                                          color: const Color(0xffBDBDBD),
                                         ),
                                       )
-                                    : const Text(
+                                    : Text(
                                         'unshow',
                                         style: TextStyle(
-                                          fontSize: 9,
-                                          color: Color(0xffBDBDBD),
+                                          fontSize: 9.sp,
+                                          color: const Color(0xffBDBDBD),
                                         ),
                                       )),
                           ),
-                          const SizedBox(
-                            height: 160,
+                          SizedBox(
+                            height: 160.h,
                           ),
                           DafultButtom(
                             ontap: () async {
@@ -147,35 +147,35 @@ class loginScreenBody extends StatelessWidget {
                             },
                             text: 'Sign In',
                           ),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: 10.h,
                           ),
                           Center(
                             child: GestureDetector(
                               onTap: () {},
-                              child: const Text(
+                              child: Text(
                                 'Forgot your password?',
                                 style: TextStyle(
-                                    fontSize: 16,
-                                    color: Color(0xff1DA1F2),
+                                    fontSize: 16.sp,
+                                    color: const Color(0xff1DA1F2),
                                     fontWeight: FontWeight.bold),
                               ),
                             ),
                           ),
-                          const SizedBox(
-                            height: 5,
+                          SizedBox(
+                            height: 5.h,
                           ),
-                          const Center(
+                          Center(
                             child: Text(
                               'or',
                               style: TextStyle(
-                                fontSize: 20,
-                                color: Color(0xffBDBDBD),
+                                fontSize: 20.sp,
+                                color: const Color(0xffBDBDBD),
                               ),
                             ),
                           ),
-                          const SizedBox(
-                            height: 10,
+                          SizedBox(
+                            height: 10.h,
                           ),
                           Column(
                             children: [
@@ -204,8 +204,8 @@ class loginScreenBody extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              const SizedBox(
-                                height: 15,
+                              SizedBox(
+                                height: 15.h,
                               ),
                               Center(
                                 child: Row(
@@ -214,23 +214,23 @@ class loginScreenBody extends StatelessWidget {
                                     Text(
                                       "Don't have an account?",
                                       style: TextStyle(
-                                        fontSize: 16,
+                                        fontSize: 16.sp,
                                         color: textColor,
                                       ),
                                     ),
-                                    const SizedBox(
-                                      width: 8.0,
+                                    SizedBox(
+                                      width: 8.0.w,
                                     ),
                                     GestureDetector(
                                       onTap: () {
                                         AppHelper.NavigateToNextScreens(
                                             context, SignUpScreen());
                                       },
-                                      child: const Text(
+                                      child: Text(
                                         'Sign up',
                                         style: TextStyle(
-                                            fontSize: 16,
-                                            color: Color(0xff1DA1F2),
+                                            fontSize: 16.sp,
+                                            color: const Color(0xff1DA1F2),
                                             fontWeight: FontWeight.bold),
                                       ),
                                     )

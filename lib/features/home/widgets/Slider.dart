@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/features/home/widgets/DefultCarouselSlider.dart';
 
 import '../../../core/getAllImageService.dart';
@@ -10,10 +11,8 @@ class SliderPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 250,
-
-      //width: double.infinity,
+    return SizedBox(
+      height: 250.h,
       child: FutureBuilder(
           future: getImagesFromFirebaseStorage(NameofFolder: 'suites'),
           builder: (context, snapshot) {
@@ -23,7 +22,7 @@ class SliderPage extends StatelessWidget {
               final List ListUrl = snapshot.data!;
               return Defult_Carouse_lSlider(imgList: ListUrl);
             } else {
-              return Center(child: CircularProgressIndicator());
+              return const Center(child: CircularProgressIndicator());
             }
           }),
     );

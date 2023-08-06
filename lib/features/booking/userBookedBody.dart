@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotel_app/core/style/colors.dart';
 import 'package:intl/intl.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import '../../Cubit/HomeCubit/home_cubit.dart';
-import '../../core/global.dart';
 import '../widgets/DefultButtom.dart';
 import '../widgets/DefultTextFormField.dart';
 import '../home/homeScreen.dart';
@@ -77,32 +77,32 @@ class userBookedBody extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        const SizedBox(
-                          height: 50,
+                        SizedBox(
+                          height: 30.h,
                         ),
                         Text(
                           'Please fill the form',
                           style: TextStyle(
-                              fontSize: 30,
+                              fontSize: 30.sp,
                               color: textColor,
                               fontWeight: FontWeight.bold),
                         ),
-                        const SizedBox(
-                          height: 60.0,
+                        SizedBox(
+                          height: 30.0.h,
                         ),
-                        const Text(
+                        Text(
                           'Enter your Name',
                           style: TextStyle(
-                            fontSize: 18,
-                            color: Color.fromARGB(255, 216, 214, 214),
+                            fontSize: 18.sp,
+                            color: const Color.fromARGB(255, 216, 214, 214),
                           ),
                         ),
-                        const SizedBox(
-                          height: 10.0,
+                        SizedBox(
+                          height: 10.0.h,
                         ),
                         DefultTextFormField(
                           text: 'Name',
-                          iconDatapre: Icons.person,
+                          prefixIcon: Icons.person,
                           keyboardType: TextInputType.text,
                           ispassword: false,
                           TextLabel: 'Enter your Name',
@@ -111,22 +111,22 @@ class userBookedBody extends StatelessWidget {
                             name = value;
                           },
                         ),
-                        const SizedBox(
-                          height: 10.0,
+                        SizedBox(
+                          height: 10.0.h,
                         ),
-                        const Text(
+                        Text(
                           'Number of individuals',
                           style: TextStyle(
-                            fontSize: 18,
-                            color: Color.fromARGB(255, 216, 214, 214),
+                            fontSize: 18.sp,
+                            color: const Color.fromARGB(255, 216, 214, 214),
                           ),
                         ),
-                        const SizedBox(
-                          height: 10.0,
+                        SizedBox(
+                          height: 10.0.h,
                         ),
                         DefultTextFormField(
                           text: 'Number of individuals',
-                          iconDatapre: Icons.numbers,
+                          prefixIcon: Icons.numbers,
                           keyboardType: TextInputType.number,
                           ispassword: false,
                           TextLabel: 'Enter your Number of individuals',
@@ -135,22 +135,22 @@ class userBookedBody extends StatelessWidget {
                             Number_of_individuals = value;
                           },
                         ),
-                        const SizedBox(
-                          height: 10.0,
+                        SizedBox(
+                          height: 10.0.h,
                         ),
-                        const Text(
+                        Text(
                           'start in a hotel',
                           style: TextStyle(
-                            fontSize: 18,
-                            color: Color.fromARGB(255, 216, 214, 214),
+                            fontSize: 18.sp,
+                            color: const Color.fromARGB(255, 216, 214, 214),
                           ),
                         ),
-                        const SizedBox(
-                          height: 10.0,
+                        SizedBox(
+                          height: 10.0.h,
                         ),
                         Container(
-                          width: 343,
-                          height: 50.0,
+                          width: 343.w,
+                          height: 50.0.h,
                           decoration: BoxDecoration(
                               color: textformfield,
                               borderRadius: BorderRadius.circular(20)),
@@ -185,22 +185,22 @@ class userBookedBody extends StatelessWidget {
                                     color: Colors.white)),
                           ),
                         ),
-                        const SizedBox(
-                          height: 10.0,
+                        SizedBox(
+                          height: 10.0.h,
                         ),
-                        const Text(
+                        Text(
                           'Expiration_date',
                           style: TextStyle(
-                            fontSize: 18,
-                            color: Color.fromARGB(255, 216, 214, 214),
+                            fontSize: 18.sp,
+                            color: const Color.fromARGB(255, 216, 214, 214),
                           ),
                         ),
-                        const SizedBox(
-                          height: 10.0,
+                        SizedBox(
+                          height: 10.0.h,
                         ),
                         Container(
-                          width: 343,
-                          height: 50.0,
+                          width: 343.w,
+                          height: 50.0.h,
                           decoration: BoxDecoration(
                               color: textformfield,
                               borderRadius: BorderRadius.circular(20)),
@@ -250,7 +250,7 @@ class userBookedBody extends StatelessWidget {
                                 child: Text(
                                   'payment now',
                                   style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 18.sp,
                                     color: PymentColor1,
                                   ),
                                 ),
@@ -264,7 +264,7 @@ class userBookedBody extends StatelessWidget {
                                 child: Text(
                                   'payment in the hotel',
                                   style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 18.sp,
                                     color: PymentColor2,
                                   ),
                                 ),
@@ -272,8 +272,8 @@ class userBookedBody extends StatelessWidget {
                             ],
                           ),
                         ),
-                        const SizedBox(
-                          height: 50,
+                        SizedBox(
+                          height: 30.h,
                         ),
                         DafultButtom(
                           ontap: () async {

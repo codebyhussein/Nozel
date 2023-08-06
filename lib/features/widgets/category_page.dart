@@ -33,15 +33,15 @@ class categoryScreen extends StatelessWidget {
           )),
           Center(
             child: Text(
-              '$CategoryText',
+              CategoryText,
               style: TextStyle(
                   color: textColor, fontFamily: 'Nova Oval', fontSize: 30),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Container(
+          SizedBox(
             height: 510,
             child: FutureBuilder(
               future:
@@ -89,7 +89,7 @@ class categoryScreen extends StatelessWidget {
                       },
                       itemCount: ListUrl.length);
                 } else {
-                  return Center(child: CircularProgressIndicator());
+                  return const Center(child: CircularProgressIndicator());
                 }
               },
             ),

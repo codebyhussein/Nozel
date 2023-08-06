@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DefultButtomInHomePage extends StatelessWidget {
   DefultButtomInHomePage({super.key, required this.ontap, required this.text});
@@ -8,8 +9,8 @@ class DefultButtomInHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-          height: 59.0,
-          width: 192.0,
+          height: 55.0.h,
+          width: 192.0.w,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(6),
             border: Border.all(color: Colors.white, style: BorderStyle.solid),
@@ -22,7 +23,7 @@ class DefultButtomInHomePage extends StatelessWidget {
                 text!,
                 style: TextStyle(
                     color: Colors.lightBlue,
-                    fontSize: 25.0,
+                    fontSize: 25.0.sp,
                     fontFamily: 'Nova Oval'),
               ),
             ),
